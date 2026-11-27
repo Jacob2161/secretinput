@@ -3,7 +3,8 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/jacob2161/secretinput.svg)](https://pkg.go.dev/github.com/jacob2161/secretinput)
 [![CI](https://github.com/jacob2161/secretinput/actions/workflows/ci.yml/badge.svg)](https://github.com/jacob2161/secretinput/actions/workflows/ci.yml)
 
-Read secrets for command line programs from a file or a terminal prompt that does not echo, never from arguments.
+Read secrets for command line programs from a file or a terminal prompt that does not echo, never
+from arguments.
 
 ```bash
 go get github.com/jacob2161/secretinput

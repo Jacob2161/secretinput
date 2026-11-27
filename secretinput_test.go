@@ -28,7 +28,7 @@ func TestReadFile(t *testing.T) {
 		}
 	}
 	if _, err := ReadFile(filepath.Join(directory, "missing")); !errors.Is(err, os.ErrNotExist) {
-		t.Fatalf("a missing file: %v", err)
+		t.Fatalf("ReadFile(a missing file) = %v, want os.ErrNotExist", err)
 	}
 }
 
@@ -43,7 +43,7 @@ func TestPromptRefusesNonTerminal(t *testing.T) {
 	defer writer.Close()
 	var prompt strings.Builder
 	if _, err := Prompt(reader, &prompt, "Password: "); !errors.Is(err, ErrNotTerminal) {
-		t.Fatalf("a pipe: %v", err)
+		t.Fatalf("Prompt(a pipe) = %v, want ErrNotTerminal", err)
 	}
 	if prompt.Len() != 0 {
 		t.Fatalf("the prompt was written to a non-terminal: %q", prompt.String())
