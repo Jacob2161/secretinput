@@ -24,4 +24,4 @@ if errors.Is(err, secretinput.ErrNotTerminal) {
 - Secrets in arguments leak through shell history and the process list; a file or a prompt does not.
 - `Prompt` refuses to read from a pipe, so scripts fail loudly instead of hanging.
 
-Tested on the two newest Go releases. Licensed under the MIT license.
+Requires Go 1.27. Licensed under the MIT license.
